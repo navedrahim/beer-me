@@ -31,7 +31,7 @@ https://api.openbrewerydb.org/breweries/search?query=" "
   }`
 
 ## Wireframe
-  [Imgur](https://i.imgur.com/HC4kPZW.png)
+  ![Imgur](https://i.imgur.com/HC4kPZW.png)
 
 ## Minimum Viable Product
   * Responsive design for desktop and mobile.
@@ -54,7 +54,7 @@ https://api.openbrewerydb.org/breweries/search?query=" "
 | 6/14 | Presentation |
 
 ## Priority Matrix
-[Imgur](https://i.imgur.com/UmC5ZPQ.png)
+![Imgur](https://i.imgur.com/UmC5ZPQ.png)
 
 ## Timeframes
 | Component | Estimated time |
