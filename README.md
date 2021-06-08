@@ -9,7 +9,7 @@ info such as: brewery name, address, website, and phone number.
 https://api.openbrewerydb.org/breweries/search?query=" "
 
 ## API Snippet
-`{
+```{
     "id": 9183,
     "obdb_id": "boulevard-brewing-co-kansas-city",
     "name": "Boulevard Brewing Co",
@@ -28,7 +28,8 @@ https://api.openbrewerydb.org/breweries/search?query=" "
     "website_url": "http://www.boulevard.com",
     "updated_at": "2018-08-24T00:00:00.000Z",
     "created_at": "2018-07-24T00:00:00.000Z"
-  }`
+  }
+```
 
 ## Wireframe
   ![Imgur](https://i.imgur.com/HC4kPZW.png)
