@@ -60,8 +60,16 @@ https://api.openbrewerydb.org/breweries/search?query=" "
 ## Timeframes
 | Component | Estimated time |
 | --- | --- |
-| Pseudocoding | 2 hrs |
+| Research/Setup | 3 hrs |
+| Pseudocoding | 3 hrs |
 | HTML | 3 hrs |
-| JavaScript | 3 hrs |
-| CSS | 3 hrs |
+| Image placement | 3 hrs |
+| Initial JavaScript setup | 3 hrs |
+| Axios setup | 3 hrs |
+| Search and results functionality | 3 hrs |
+| Final JS functionality | 3 hrs |
+| CSS basic layout | 3 hrs |
+| CSS grid | 3 hrs |
+| Final design and formatting | 3 hrs |
 | Debugging | 3 hrs |
+| Deployment | 3 hrs |
