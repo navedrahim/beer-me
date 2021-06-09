@@ -4,15 +4,56 @@ const button = document.querySelector('button');
 // make an axios call and console log result
 // make a callback function that can take the data and attach it to the DOM
 // create event listener for button
-function showBrew(e) {
-  e.preventDefault();
-// create li
-  const addToList = document.createElement('li');
-  
-//set li innertext
-  addToList.innerText = input.value
-//append li to ul
-  list.appendChild(addToList);
+button.addEventListener('click', (e) => {
+  e.preventDefault()
+  let input = document.querySelector('input').value
+  console.log(input);
+  getBrew(input);
+})
+
+
+
+const getBrew = async (input) => {
+  try {
+    const res = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${input}`)
+    let results = res.data[0];
+    console.log(results);
+    showBrews(results);
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+getBrew();
+
+const showBrews = (results) => {
+  const brewList = document.querySelector('.brewery');
+  results.forEach(data => {
+    const name = document.createElement('p');
+    name.innerText = data.name;
+
+    const street = document.createElement('p');
+    street.innerText = data.street;
+
+    const city = document.createElement('p')
+    city.innerText = data.city;
+
+    const zipCode = document.createElement('p');
+    zipCode.innerText = data.postal_code;
+
+    const website = document.createElement('p');
+    website.innerHTML = data.website_url;
+
+    const phone = document.createElement('p');
+    phone.innerText = data.phone;
+
+    brewList.append(name, street, city, zipCode, website, phone);
+  })
+
 }
 
-button.addEventListener('click', showBrew);
+function removeSearch() {
+  const removeCurrent = document.querySelector('.brewery')
+  while (removeCurrent.lastChild) {
+    removeCurrent.removeChild(removeCurrent.lastChild)
+  }
+}
