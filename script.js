@@ -1,11 +1,11 @@
 const list = document.querySelector('#show-brew');
 const input = document.querySelector('input');
 const button = document.querySelector('button');
-// make an axios call and console log result
-// make a callback function that can take the data and attach it to the DOM
-// create event listener for button
+
+
 button.addEventListener('click', (e) => {
   e.preventDefault()
+  removeSearch();
   let input = document.querySelector('input').value
   console.log(input);
   getBrew(input);
@@ -16,9 +16,9 @@ button.addEventListener('click', (e) => {
 const getBrew = async (input) => {
   try {
     const res = await axios.get(`https://api.openbrewerydb.org/breweries/search?query=${input}`)
-    let results = res.data[0];
-    console.log(results);
-    showBrews(results);
+    let results = res.data;
+    console.log(results.slice(0, 3));
+    showBrews(results.slice(0, 3));
   } catch (error) {
     console.log(error.message);
   }
