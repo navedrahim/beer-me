@@ -28,7 +28,7 @@ getBrew();
 const showBrews = (results) => {
   const brewList = document.querySelector('.brewery');
   results.forEach(data => {
-    const name = document.createElement('p');
+    const name = document.createElement('h3');
     name.innerText = data.name;
 
     const street = document.createElement('p');
@@ -37,16 +37,21 @@ const showBrews = (results) => {
     const city = document.createElement('p')
     city.innerText = data.city;
 
+    const state = document.createElement('p');
+    state.innerText = data.state;
+
     const zipCode = document.createElement('p');
     zipCode.innerText = data.postal_code;
 
-    const website = document.createElement('p');
+    const website = document.createElement('a');
     website.innerHTML = data.website_url;
-
+    website.setAttribute('href', `${data.website_url}`);
+    
     const phone = document.createElement('p');
-    phone.innerText = data.phone;
+    phone.innerHTML = data.phone;
+    // phone.setAttribute('href', `${data.phone}`);
 
-    brewList.append(name, street, city, zipCode, website, phone);
+    brewList.append(name, street, city, state, zipCode, website, phone);
   })
 
 }
