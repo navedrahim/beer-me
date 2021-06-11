@@ -29,6 +29,7 @@ const showBrews = (results) => {
   const brewList = document.querySelector('.brewery');
   results.forEach(data => {
     const container = document.createElement('div');
+    container.classList.add('card');
     const name = document.createElement('h3');
     name.innerText = data.name;
 
