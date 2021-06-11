@@ -23,9 +23,11 @@ const getBrew = async (input) => {
     console.log(error.message);
   }
 }
-getBrew();
+// getBrew();
 
 const showBrews = (results) => {
+  const footer = document.querySelector('footer');
+  footer.classList.remove("bottom");
   const brewList = document.querySelector('.brewery');
   results.forEach(data => {
     const container = document.createElement('div');

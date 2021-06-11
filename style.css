@@ -1,7 +1,6 @@
 body {
   font-family: 'Raleway', sans-serif;
   display: grid;
-  
 }
 
 html {
@@ -19,6 +18,14 @@ h1 {
   padding: 10px;
 }
 
+.big {
+  font-size: 50px;
+}
+
+.small {
+  font-size: 15px;
+}
+
 header, footer {
   text-align: left;
   color: white;
@@ -30,6 +37,17 @@ header, footer {
   margin: 10px;
 }
 
+footer {
+  margin-top: 40px;
+}
+
+.bottom {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  left: 10px;
+}
+
 #footer {
   color: white;
   text-align: center;
@@ -37,10 +55,7 @@ header, footer {
 }
 
 .brewery {
-  /* background-color: white; */
   opacity: 0.7;
-  /* column-width: 150px;
-  column-count: 3; */
   display:flex;
   justify-content: space-around;
 }
@@ -48,7 +63,6 @@ header, footer {
 .card {
   background-color: white;
   width: 30vw;
-  
 }
 
 @media screen and (max-width: 600px) {
