@@ -1,7 +1,7 @@
-const list = document.querySelector('#show-brew');
 const input = document.querySelector('input');
 const button = document.querySelector('button');
-
+const modal = document.getElementById('simpleModal');
+const enterSite = document.getElementById('approve');
 
 button.addEventListener('click', (e) => {
   e.preventDefault()
@@ -11,6 +11,10 @@ button.addEventListener('click', (e) => {
   getBrew(input);
 })
 
+enterSite.addEventListener('click', closeModal)
+function closeModal() {
+  modal.style.display = 'none';
+}
 
 
 const getBrew = async (input) => {
