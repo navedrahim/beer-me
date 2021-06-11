@@ -28,6 +28,7 @@ getBrew();
 const showBrews = (results) => {
   const brewList = document.querySelector('.brewery');
   results.forEach(data => {
+    const container = document.createElement('div');
     const name = document.createElement('h3');
     name.innerText = data.name;
 
@@ -49,9 +50,9 @@ const showBrews = (results) => {
     
     const phone = document.createElement('p');
     phone.innerHTML = data.phone;
-    // phone.setAttribute('href', `${data.phone}`);
 
-    brewList.append(name, street, city, state, zipCode, website, phone);
+    container.append(name, street, city, state, zipCode, website, phone);
+    brewList.appendChild(container);
   })
 
 }
