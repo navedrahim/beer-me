@@ -73,3 +73,6 @@ https://api.openbrewerydb.org/breweries/search?query=" "
 | Final design and formatting | 3 hrs |
 | Debugging | 3 hrs |
 | Deployment | 3 hrs |
+
+## Link to Site
+https://brave-fermat-adf260.netlify.app/

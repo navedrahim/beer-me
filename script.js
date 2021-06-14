@@ -1,6 +1,6 @@
 const input = document.querySelector('input');
 const button = document.querySelector('button');
-const modal = document.getElementById('simpleModal');
+const modal = document.getElementById('modalBox');
 const enterSite = document.getElementById('approve');
 
 button.addEventListener('click', (e) => {
@@ -27,7 +27,7 @@ const getBrew = async (input) => {
     console.log(error.message);
   }
 }
-// getBrew();
+
 
 const showBrews = (results) => {
   const footer = document.querySelector('footer');
